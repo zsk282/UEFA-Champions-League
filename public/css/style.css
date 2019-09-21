@@ -1,0 +1,51 @@
+body {
+    background: darkblue;
+}
+
+.card {
+	display: -webkit-inline-box;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+    transition: 0.3s;
+    max-width: 23%;
+    border: none;
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.rounded-circle{
+	width: 40px;
+}
+
+.name{
+	font-size: 14px;
+	margin: 10px 0 0 0;
+
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 3px 6px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 50px;
+}
+.logo_img{
+	margin-top: 1%;
+	width: 12%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+li.list-group-item.group_head {
+    border-bottom: solid 5px deeppink;
+    color: mediumvioletred;
+    text-align: center;
+}

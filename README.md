@@ -94,5 +94,6 @@ https://drive.google.com/file/d/1Irp4O9Hsf_cOcwhp30eKYJsES6TI7Mfi/view?usp=shari
 - Laravel + MongoBD (jenssegers/laravel-mongodb)
 - Laravel Migrations
 - Laravel Resources
+- Laravel Seeders
 - Laravel API's
 - Laravel's Blade Template 

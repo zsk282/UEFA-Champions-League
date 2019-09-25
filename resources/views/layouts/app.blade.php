@@ -11,7 +11,9 @@
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     </head>
     <body>
-        @yield('content')
+    	<dir class="container-fluid">
+        	@yield('content')
+    	</dir>
 
         @yield('script')
     </body>

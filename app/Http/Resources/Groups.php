@@ -20,6 +20,7 @@ class Groups extends ResourceCollection
             $dataArray[] = [
                 'name' => $value->name,
                 'country' => $value->country,
+                'is_domestic_winner' => $value->is_domestic_winner,
                 'club_logo' => $value->club_logo,
             ];        
         }

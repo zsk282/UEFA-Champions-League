@@ -22,6 +22,7 @@
             url: "{{ url('/') }}/api/v1/groups",
             cache: false,
             success: function(data){
+                console.log(data)
                 for(var row in data.data){
                     $("#content_box").append(HTMLtemplate(row,data.data[row]));
                 }
@@ -54,16 +55,32 @@
         dom += '</li>';
         
         for(var team in data){
-            dom += '<li class="list-group-item">';
-            dom += '<div class="row">';
-            dom += '<div class="col-12 col-sm-6 col-md-3">';
-            dom += '<img src="'+data[team].club_logo+'" class="rounded-circle mx-auto d-block">';
-            dom += '</div>';
-            dom += '<div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">';
-            dom += '<label class="name lead">'+data[team].name+' ('+data[team].country+')</label>';
-            dom += '</div>';
-            dom += '</div>';
-            dom += '</li>';
+            if(data[team].is_domestic_winner){
+                dom += '<li class="list-group-item">';
+                dom += '<div class="row">';
+                dom += '<div class="col-12 col-sm-6 col-md-3">';
+                dom += '<img src="'+data[team].club_logo+'" class="rounded-circle mx-auto d-block">';
+                dom += '</div>';
+                dom += '<div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">';
+                dom += '<label class="name lead">'+data[team].name+' ('+data[team].country+')</label>';
+                dom += '</div>';
+                dom += '</div>';
+                dom += '</li>';
+            }
+        }
+        for(var team in data){
+            if(!data[team].is_domestic_winner){
+                dom += '<li class="list-group-item">';
+                dom += '<div class="row">';
+                dom += '<div class="col-12 col-sm-6 col-md-3">';
+                dom += '<img src="'+data[team].club_logo+'" class="rounded-circle mx-auto d-block">';
+                dom += '</div>';
+                dom += '<div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">';
+                dom += '<label class="name lead">'+data[team].name+' ('+data[team].country+')</label>';
+                dom += '</div>';
+                dom += '</div>';
+                dom += '</li>';
+            }
         }
         dom += '</ul>';
         dom += '</div>';

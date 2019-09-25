@@ -32,6 +32,7 @@
     function shuffle(){
         $.ajax({
             url: "{{ url('/') }}/api/v1/shuffle",
+            type: 'PUT',
             cache: false,
             success: function(data){
                 location.reload();

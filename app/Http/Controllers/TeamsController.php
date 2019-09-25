@@ -52,7 +52,7 @@ class TeamsController extends Controller
 		return $finalData;
     }
 
-	public function fill($winner,$loser){
+	private function fill($winner,$loser){
 
 		// randomize data
 		shuffle($winner);
@@ -78,7 +78,7 @@ class TeamsController extends Controller
 		return $winner;
 	}
 
-	public function validator($winner){
+	private function validator($winner){
 		$flag = 0;
 		foreach ($winner as $value) {
 			foreach ($value as $data) {

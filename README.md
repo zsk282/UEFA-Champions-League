@@ -84,5 +84,5 @@ DB_PASSWORD=
     
 There we go this is all in our application setup, easy, Right! :)
 
-If all steps were right you will be able to see this Screen
-![alt text](https://drive.google.com/file/d/1Irp4O9Hsf_cOcwhp30eKYJsES6TI7Mfi/view?usp=sharing)    
+If all steps were right you will be able to see this Screen. Please check below link for screenshot
+https://drive.google.com/file/d/1Irp4O9Hsf_cOcwhp30eKYJsES6TI7Mfi/view?usp=sharing

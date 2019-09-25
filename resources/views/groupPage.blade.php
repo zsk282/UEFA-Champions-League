@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-sm-12">
         <img class="logo_img" src="/images/logo.png">
-        <button type="button" class="btn btn-outline-warning mx-auto d-block my-4">Shuffle</button>
+        <button type="button" onclick="shuffle()" class="btn btn-outline-warning mx-auto d-block my-4">Shuffle</button>
     </div>
 </div>
 <div class="row" id="content_box">
@@ -29,6 +29,16 @@
         });
     });
 
+    function shuffle(){
+        $.ajax({
+            url: "{{ url('/') }}/api/v1/shuffle",
+            cache: false,
+            success: function(data){
+                location.reload();
+            }
+        });
+    }
+
     function HTMLtemplate(row,data){
         var dom = '';
         dom += '<div class="card card-default col-md-3">';
@@ -49,7 +59,7 @@
             dom += '<img src="'+data[team].club_logo+'" class="rounded-circle mx-auto d-block">';
             dom += '</div>';
             dom += '<div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">';
-            dom += '<label class="name lead">'+data[team].name+'</label>';
+            dom += '<label class="name lead">'+data[team].name+' ('+data[team].country+')</label>';
             dom += '</div>';
             dom += '</div>';
             dom += '</li>';

@@ -14,4 +14,5 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/v1/groups', 'TeamsController@fetchTeams');
+
 Route::get('/v1/shuffle', 'TeamsController@shuffleTeams');

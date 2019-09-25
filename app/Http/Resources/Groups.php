@@ -19,9 +19,7 @@ class Groups extends ResourceCollection
         foreach ($this->collection as $value) {
             $dataArray[] = [
                 'name' => $value->name,
-                // 'country' => $value->country,
-                // 'is_domestic_winner' => $value->is_domestic_winner,
-                // 'group_name' => $value->group_name,
+                'country' => $value->country,
                 'club_logo' => $value->club_logo,
             ];        
         }

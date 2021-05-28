@@ -10,7 +10,7 @@ class TeamsController extends Controller
 {
 	private $masterArray;
 
-	private $alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "Z", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AB"];
+	private $alphabet = ["A", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "Z", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AB"];
 
     public function fetchTeams(Request $request){
     	return GroupResource::collection(Teams::all()->sortBy('group_name')->groupBy('group_name'));
